@@ -1,0 +1,14 @@
+// ZMK Studio unlock combo — two-handed press of the Corne's dead outer-corner keys
+// (position 0 = top-left, 11 = top-right; the outer pinky column is &none on every layer).
+// Loaded ONLY for Studio builds via build.sh (a CONFIG_ guard in the keymap can't work:
+// Zephyr preprocesses devicetree before Kconfig). Requires CONFIG_ZMK_STUDIO=y.
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_studio_unlock {
+            timeout-ms = <100>;
+            key-positions = <0 11>;
+            bindings = <&studio_unlock>;
+        };
+    };
+};
