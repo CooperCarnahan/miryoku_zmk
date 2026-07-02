@@ -1,6 +1,9 @@
 # Corne + nice!nano v2 + nice!view, Miryoku (custom_config.h), mouse/pointing enabled
 name: 'Build corne nice_view + mouse'
-on: workflow_dispatch
+on:
+  push:
+    branches: [enable-mouse]
+  workflow_dispatch:
 jobs:
   build:
     uses: ./.github/workflows/main.yml
